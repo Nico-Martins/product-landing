@@ -1,9 +1,10 @@
 body {
+    font-family: 'Abel', sans-serif;
     background-image: url('background.jpg');
     background-size: 30%;
     position: relative;
     display: grid;
-    grid-template-rows: auto max-content auto;
+    grid-template-rows: auto max-content 100px;
     grid-template-areas:
     "Header"
     "Main"
@@ -24,45 +25,57 @@ header {
     width: 100vw;
     max-width: 100%;
     display: grid;
-    grid-template-columns: min-content 1fr repeat(3, min-content);
+    grid-template-columns: min-content 15fr repeat(3, 1fr);
     grid-template-areas: "logo-img logo-txt nav-product nav-pricing nav-shipping";
+    justify-items: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
 }
 #header-img {
     grid-area: logo-img;
     width: 150px;
     height: auto;
-    align-self: center;
 }
 #logo-text {
-    font-size: 4.5em;
+    font-size: 2.8em;
     grid-area: logo-txt;
     justify-self: start;
-    align-self: center;
     color: rgb(70, 70, 70);
     font-family: 'Bebas Neue', cursive;
 }
 .nav-link {
-
+    color: black;
+    text-decoration: none;
+}
+.nav-link:hover {
+    font-size: 27px;
 }
 
 /*Main part of the webpage*/
 main {
-    padding-top: 5%;
+    font-size: 20px;
+    padding-top: 6%;
     grid-area: Main;
     background-color: white;
     width: 90%;
     margin: auto;
     display: grid;
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: auto auto min-content auto min-content auto auto;
     grid-template-areas:
     "title"
     "product"
+    "hr1"
     "pricing"
+    "hr2"
     "shipping"
     "form";
     box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.3);
 }
 #title {
+    font-size: 2.25em;
+    font-weight: bolder;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
     grid-area: title;
     justify-self: center;
     align-self: center;
@@ -73,32 +86,114 @@ main {
     display: grid;
     justify-items: center;
     align-items: center;   
+    row-gap: 6%;
+}
+#video {
+    box-shadow: 0px 0px 10px 1px rgba(105, 105, 105, 0.2);
+}
+#hr1 {
+    grid-area: hr1;
+    width: 90%;
 }
 #pricing {
     padding: 4%;
     grid-area: pricing; 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+#hr2 {
+    grid-area: hr2;
+    width: 90%;
+}
+hr {
+    width: 100%;
+}
+#small, #medium, #bulk {
+    padding: 1em;
+    line-height: 1.8em;
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    justify-items: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 2px solid gray;
+}
+#small:hover, #medium:hover, #bulk:hover {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.pricing-button {
+    margin-top: 12%;
+    width: 90%;
 }
 #shipping {
-    padding: 4%;
+    padding: 2% 4% 0% 4%;
     grid-area: shipping; 
     display: grid;
     grid-template-columns: auto 1fr;
+    grid-template-rows: auto min-content;
+    grid-template-areas:
+    "shipping-img shipping-text"
+    "shipping-img shipping-button";
+    column-gap: 4%;
+}
+#shipping-img {
+    grid-area: shipping-img;
+    width: 180px;       
+}
+#shipping-button {
+    width: 40%;
+    margin: auto;
+    height: 60%;
 }
 #form {
     grid-area: form;
+    padding: 4%;
+    text-align: center;
+}
+#email {
+    width: 30%;
+    height: 25px;
+}
+#submit {
+    width: 5%;
+    height: 31px;
 }
 
 /*Footer part of the webpage*/
 footer {
     grid-area: Footer;
-    box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.2);
     width: 100vw;
-    max-width: 100vw;
+    max-width: 100%;
     background-color: gainsboro;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-items: center;
+    box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.footer-link {
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+}
+.footer-link:hover {
+    font-size: 27px;
+}
+@media (max-width: 600px) {
+    header {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        "up"
+        "down";
+    
+    }
+    #header-image, #logo-text {
+        grid-area: up;
+    }
+    .nav-link {
+        grid-area: down;
+    }
 }

@@ -3,7 +3,7 @@
     <head>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
     </head>
@@ -36,40 +36,43 @@
                     Phasellus ultricies eleifend elit id molestie. Cras vel dolor et tortor tincidunt rhoncus. 
                 </p>
             </div> 
+            <hr id="hr1">
             <div id="pricing">
                 <div id="small">
                     <h2>Small amount</h2>
+                    <hr>
                     <p>up to 99</p>
                     <p>1 dollar per unit</p>
-                    <button>Select</button>
+                    <button class="pricing-button">Select</button>
                 </div>
                 <div id="medium">
                     <h2>Medium package</h2>
+                    <hr>
                     <p>100 to 999</p>
                     <p>95 cents per unit</p>
-                    <button>Select</button>
+                    <button class="pricing-button">Select</button>
                 </div>
                 <div id="bulk">
                     <h2>Bulk buy</h2>
+                    <hr>
                     <p>1000 onwards</p>
                     <p>80 cents per unit</p>
-                    <button>Select</button>
+                    <button class="pricing-button">Select</button>
                 </div>
             </div>
+            <hr id="hr2">
             <div id="shipping">
-                <img src="cargo-ship.png" alt="cargo ship vector">
-                <div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lobortis elit faucibus, 
-                        volutpat est bibendum, volutpat neque. Integer at feugiat nulla. Proin ac tempus sapien, 
-                        hendrerit placerat nulla. Morbi maximus odio felis, id pulvinar nisl maximus sed. Morbi quam quam, 
-                        sollicitudin quis maximus sed, ultrices ut ante. Sed in dui mattis, bibendum turpis id, lobortis sem. 
-                        Suspendisse non leo tincidunt, vestibulum dolor id, fringilla risus. Donec imperdiet nunc vel tellus euismod 
-                        ultrices. Fusce et mattis massa, vitae facilisis nisl. Vestibulum interdum tellus tellus, vitae vulputate nisi 
-                        pharetra vitae. Nam quis iaculis felis. Morbi ac ultrices enim. Proin vitae leo imperdiet, congue diam quis, 
-                        tincidunt sapien. Maecenas ut libero lobortis, convallis nisi et, rutrum leo. 
-                    </p>
-                    <button>Learn more</button>
-                </div>
+                <img id="shipping-img" src="cargo-ship.png" alt="cargo ship vector">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lobortis elit faucibus, 
+                    volutpat est bibendum, volutpat neque. Integer at feugiat nulla. Proin ac tempus sapien, 
+                    hendrerit placerat nulla. Morbi maximus odio felis, id pulvinar nisl maximus sed. Morbi quam quam, 
+                    sollicitudin quis maximus sed, ultrices ut ante. Sed in dui mattis, bibendum turpis id, lobortis sem. 
+                    Suspendisse non leo tincidunt, vestibulum dolor id, fringilla risus. Donec imperdiet nunc vel tellus euismod 
+                    ultrices. Fusce et mattis massa, vitae facilisis nisl. Vestibulum interdum tellus tellus, vitae vulputate nisi 
+                    pharetra vitae. Nam quis iaculis felis. Morbi ac ultrices enim. Proin vitae leo imperdiet, congue diam quis, 
+                    tincidunt sapien. Maecenas ut libero lobortis, convallis nisi et, rutrum leo. 
+                </p>
+                <button id="shipping-button">Learn more</button>
             </div>
             <form id="form"  action="https://www.freecodecamp.com/email-submit">
                 <label for="email">
@@ -79,9 +82,9 @@
             </form>
         </main>
         <footer>
-            <a href="#">Contact</a>
-            <a href="#">Location</a>
-            <a href="#">About us</a>
+            <a class="footer-link" href="#">Contact</a>
+            <a class="footer-link" href="#">Location</a>
+            <a class="footer-link" href="#">About us</a>
         </footer>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     </body>
